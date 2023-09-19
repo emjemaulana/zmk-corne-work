@@ -51,11 +51,7 @@
                 };
 
                 both_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+
                         bindings = <
    &kp LEFT_SHIFT  &kp Q   &kp W &kp E   &kp R   &kp T      &kp LBKT  &mt CARET Y  &kp MINUS &kp N7    &kp N8    &kp LS(N)
    &kp CARET       &kp A   &kp S &kp D   &kp F   &kp G      &kp RBKT  &mt CARET Z  &kp SQT   &kp ASTRK &kp EQUAL &mt CARET G
