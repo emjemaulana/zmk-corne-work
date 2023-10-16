@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE    0
-#define LOWER   1
-#define RAISE   2
+#define RAISE   1
+#define LOWER   2
 #define BOTH    3
 
 &mt {
@@ -24,39 +24,39 @@
                 base_layer {
 
                         bindings = <
-   &kp GRAVE   &kp Q       &kp D       &kp R        &kp W        &kp B    &kp J  &kp F        &kp U        &kp P        &kp SEMI    &kp BSLH
-   &kp ESC     &mt LGUI A  &mt LALT S  &mt CARET H  &mt LSHFT T  &kp G    &kp Y  &mt LSHFT N  &mt CARET E  &mt RALT O   &mt RGUI I  &kp SQT
-   &kp TAB     &kp Z       &kp X       &kp M        &kp C        &kp V    &kp K  &kp L        &kp COMMA    &kp DOT      &kp FSLH    &kp BSPC
-                                   &kp CLCK &mo LOWER &kp SPACE   &kp RET &mo RAISE &to BOTH
+   &kp GRAVE        &kp Q       &kp W        &kp F             &kp P        &kp B    &kp J  &kp L        &kp U             &kp Y         &kp SEMI    &kp BSLH
+   &kp LEFT_SHIFT   &mt LGUI A  &mt CARET R  &mt LEFT_SHIFT S  &mt LALT T   &kp G    &kp M  &mt RALT N   &mt LEFT_SHIFT E  &mt CARET I   &mt RGUI O  &kp SQT
+   &kp EXCL         &kp Z       &kp X        &kp C             &kp V        &kp D    &kp K  &kp H        &kp COMMA         &kp DOT       &kp FSLH    &kp ESC
+                                            &mt CAPS &mo LOWER &kp SPACE   &kp BACKSPACE &mo RAISE &to BOTH
                         >;
                 };
                 raise_layer {
 
                         bindings = <
-   &kp DEL    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &trans
-   &kp CARET  &kp DLLR     &kp PLUS     &kp LPAR     &kp RPAR     &kp AT         &kp PIPE &kp MINUS &kp EQUAL &kp UNDER &kp ASTRK &trans
-   &kp LALT   &kp EXCL     &kp HASH     &kp LBRC     &kp RBRC     &kp TILDE      &kp AMPS &kp LBKT  &kp RBKT  &kp PRCNT &kp CARET &trans
-                                    &trans     &trans       &trans      &trans  &trans   &trans
+   &kp LALT    &kp N4       &kp N3       &kp N2       &kp N1       &kp N5         &kp N6   &kp N0    &kp N9    &kp N8    &kp N7    &none
+   &kp CARET   &kp DLLR     &kp PLUS     &kp LPAR     &kp LBRC     &kp AT         &kp PIPE &kp MINUS &kp EQUAL &kp UNDER &kp ASTRK &none
+   &kp LSHFT   &kp EXCL     &kp HASH     &kp LBRC     &kp RBRC     &kp TILDE      &kp AMPS &kp PRCNT &kp LBKT  &kp RBKT  &kp CARET &none
+                                    &none     &none       &none      &none  &none   &none
                         >;
                 };
 
                 lower_layer {
 
                         bindings = <
-   &trans     &kp HOME       &kp UP       &kp END        &kp PG_UP      &kp INS         &trans &kp F1  &kp F2 &kp F3  &kp F4  &kp PG_UP
-   &trans     &kp LEFT       &kp DOWN     &kp RIGHT      &kp PG_DN      &kp DEL         &trans &kp F5  &kp F6 &kp F7  &kp F8  &kp PG_DN
-   &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans &kp F9  &kp F10&kp F11 &kp F12 &kp END
-                                    &none &none   &none   &none   &none   &none
+   &bt BT_CLR    &bt BT_SEL 0       &kp F1    &kp F2   &kp F3   &kp F4    &kp HOME   &kp END     &kp PG_UP      &kp PG_DN       &kp DEL               &kp INS
+   &bt BT_SEL 1  &bt BT_SEL 2       &kp F5    &kp F6   &kp F7   &kp F8    &kp LEFT   &kp RIGHT   &kp UP         &kp DOWN        &mt K_UNDO C_AC_REDO  &mt K_COPY K_CUT
+   &bt BT_SEL 3  &bt BT_SEL 4       &kp F9    &kp F10  &kp F11  &kp F12   &kp K_PREV &kp K_NEXT  &kp K_VOL_UP   &kp K_VOL_DN    &kp K_PP              &kp K_PASTE
+                                                 &trans &trans   &trans   &trans   &trans   &trans
                         >;
                 };
 
                 both_layer {
 
                         bindings = <
-   &kp LEFT_SHIFT  &kp Q   &kp W &kp E   &kp R   &kp T      &kp LBKT  &mt CARET Y  &kp MINUS &kp N7    &kp N8    &kp LS(N)
-   &kp CARET       &kp A   &kp S &kp D   &kp F   &kp G      &kp RBKT  &mt CARET Z  &kp SQT   &kp ASTRK &kp EQUAL &mt CARET G
-   &kp LALT        &kp Z   &kp X &kp C   &kp V   &kp B      &kp BSPC  &kp P        &kp SEMI  &kp 9     &kp MINUS &kp LS(G)
-                             &kp ESC &mo LOWER   &kp SPACE      &mo RAISE   &kp HOME   &to BASE
+   &kp TAB         &kp Q   &kp W &kp E   &kp R   &kp T      &kp Y  &kp U  &kp I      &kp O    &kp P    &kp FSLH
+   &kp LEFT_SHIFT  &kp A   &kp S &kp D   &kp F   &kp G      &kp H  &kp J  &kp K      &kp L    &kp SEMI &kp SQT
+   &kp CARET       &kp Z   &kp X &kp C   &kp V   &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp BSLH &kp BACKSPACE
+                             &kp LALT &mo RAISE   &kp SPACE      &kp ESC   &kp LGUI   &to BASE
                         >;
                 };
         };
