@@ -14,7 +14,7 @@
 #define BOTH    3
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <500>;
 };
 
 / {
@@ -24,17 +24,17 @@
                 base_layer {
 
                         bindings = <
-   &kp GRAVE        &kp Q       &kp W        &kp F             &kp P        &kp B    &kp J  &kp L        &kp U             &kp Y         &kp SEMI    &kp BSLH
-   &kp LEFT_SHIFT   &mt LGUI A  &mt CARET R  &mt LEFT_SHIFT S  &mt LALT T   &kp G    &kp M  &mt RALT N   &mt LEFT_SHIFT E  &mt CARET I   &mt RGUI O  &kp SQT
-   &kp EXCL         &kp Z       &kp X        &kp C             &kp V        &kp D    &kp K  &kp H        &kp COMMA         &kp DOT       &kp FSLH    &kp ESC
-                                            &kp CAPS &mo RAISE &kp SPACE    &kp BACKSPACE &mo LOWER &to BOTH
+   &kp GRAVE      &kp Q       &kp W        &kp F             &kp P        &kp B    &kp J  &kp L        &kp U             &kp Y         &kp SEMI    &kp BSLH
+   &kp KP_MINUS   &mt LGUI A  &mt LCTRL R  &mt LEFT_SHIFT S  &mt LALT T   &kp G    &kp M  &mt RALT N   &mt LEFT_SHIFT E  &mt LCTRL I   &mt RGUI O  &kp SQT
+   &kp EXCL       &kp Z       &kp X        &kp C             &kp D        &kp V    &kp K  &kp H        &kp COMMA         &kp DOT       &kp FSLH    &kp ESC
+                                            &mt CAPS TAB &mo RAISE &mt RET SPACE    &kp BACKSPACE &mo LOWER &tog BOTH
                         >;
                 };
                 raise_layer {
 
                         bindings = <
    &kp LALT    &kp N4       &kp N3       &kp N2       &kp N1       &kp N5         &kp N6   &kp N0    &kp N9    &kp N8    &kp N7    &none
-   &kp CARET   &kp DLLR     &kp PLUS     &kp LPAR     &kp LBRC     &kp AT         &kp PIPE &kp MINUS &kp EQUAL &kp UNDER &kp ASTRK &none
+   &kp LCTRL   &kp DLLR     &kp PLUS     &kp LPAR     &kp LBRC     &kp AT         &kp PIPE &kp MINUS &kp EQUAL &kp UNDER &kp ASTRK &none
    &kp LSHFT   &kp EXCL     &kp HASH     &kp LBRC     &kp RBRC     &kp TILDE      &kp AMPS &kp PRCNT &kp LBKT  &kp RBKT  &kp CARET &none
                                     &none     &none       &none      &none  &none   &none
                         >;
@@ -55,8 +55,8 @@
                         bindings = <
    &kp TAB         &kp Q   &kp W &kp E   &kp R   &kp T      &kp Y  &kp U  &kp I      &kp O    &kp P    &kp FSLH
    &kp LEFT_SHIFT  &kp A   &kp S &kp D   &kp F   &kp G      &kp H  &kp J  &kp K      &kp L    &kp SEMI &kp SQT
-   &kp CARET       &kp Z   &kp X &kp C   &kp V   &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp BSLH &kp BACKSPACE
-                             &kp LALT &mo RAISE   &kp SPACE      &kp ESC   &kp LGUI   &to BASE
+   &kp LCTRL       &kp Z   &kp X &kp C   &kp V   &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp BSLH &kp BACKSPACE
+                             &kp LALT &mo RAISE   &kp SPACE      &kp ESC   &kp LGUI   &tog BASE
                         >;
                 };
         };
