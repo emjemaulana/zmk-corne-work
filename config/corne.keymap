@@ -13,22 +13,12 @@
  #define RAISE   2
  #define QWERTY  3
 
+ / {
+
  &mt {
      tapping-term-ms = <500>;
  };
 
- macros {
-        ms: macro_s {
-            label = "macro_s";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp S &kp S>
-                ;
-        };
-    };
-
- / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
             tri_layer {
@@ -36,8 +26,7 @@
                 then-layer = <QWERTY>;
             };
         };
-    };
-/ {
+        
         keymap {
                  compatible = "zmk,keymap";
  
