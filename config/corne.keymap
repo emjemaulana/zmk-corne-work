@@ -35,7 +35,7 @@
     &kp GRAVE      &kp Q       &kp W        &kp F             &kp P        &kp B    &kp J  &kp L        &kp U             &kp Y         &kp SEMI    &kp BSLH
     &kp MINUS      &mt LGUI A  &mt LCTRL R  &mt LEFT_SHIFT S  &mt LALT T   &kp G    &kp M  &mt RALT N   &mt LEFT_SHIFT E  &mt LCTRL I   &mt RGUI O  &kp SQT
     &kp EXCL       &kp Z       &kp X        &kp C             &kp D        &kp V    &kp K  &kp H        &kp COMMA         &kp DOT       &kp FSLH    &kp ESC
-                                             &mt CAPS TAB &mo 1 &mt RET SPACE    &mt  &mo RAISE &to QWERTY
+                                             &mt CAPS TAB &mo 1 &mt RET SPACE    &kp BACKSPACE  &mo RAISE &to QWERTY
                          >;
                  };
                  raise_layer {
